@@ -5,24 +5,18 @@ navbar:
   type: inverse
   left:
     - text: "Introduction"
-      icon: fa-home
+      icon: fa-one
       href: index.html
     - text: "Methods & Results"
-      icon: fa-user 
+      icon: fa-two
       href: about.html
     - text: "Conclusion"
-      icon: fa-file-pdf-o
+      icon: fa-three
       href: cv.html
     - text: "References"
-      icon: fa-file-pdf-o
+      icon: fa-four
       href: references.html
-    - text: "Blog"
-      icon: fa-rss
-      href: https://soominmk.github.io/blog/  # CHANGE HERE OR DELETE ALL 3 LINES 
   right:
-    - text: "Contact me"
-      icon: fa-envelope-o
-      href: mailto:soominmk@gmail.com                    # CHANGE HERE 
     - text: "GitHub"
       icon: fa-github
       href: https://github.com/soominmk       # CHANGE HERE 
