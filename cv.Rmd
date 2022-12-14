@@ -1,9 +1,5 @@
 ---
-title: "CV"
+title: "Conclusion"
 ---
 
-<a href="CV.pdf#" class="download" title="Download CV as PDF">Download CV</a>			
-
-## Header
-
-Say more about your CV here.
+We explored how does the level of loneliness relate to the level of stress. We used correlation analyses and regression analysis to answer this question. After adjusting for social support score, social cohesion score, neighborhood disorder score, age, sex at birth, sexual orientation, race/ethnicity, education, income, birthplace, home ownership, marital status, and health insurance status, having 1 score higher loneliness score was significantly associated with 0.555 higher stress score. This magnitude is substantial given that the stress score range is 0-4. The analysis was successful considering that the p-value significance was very high. There are limitations such as the amount of missing values causing a significant drop in sample size for the regression model and that this survey was cross-sectional from which we cannot make causal inferences. Our next step would be to follow up on the respondents to make a longitudinal analysis and calculate causal risk for mental health outcomes such as depression or anxiety for varying levels of loneliness.

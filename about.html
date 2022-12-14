@@ -11,7 +11,7 @@
 
 
 
-<title>Introduction</title>
+<title>Methods &amp; Results</title>
 
 <script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -304,32 +304,80 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Introduction</h1>
+<h1 class="title toc-ignore">Methods &amp; Results</h1>
 
 </div>
 
 
-<p>The All of Us Research Program by the NIH aims to gather data from
-one million or more participants in the United States to foster research
-and conversation in how to improve health and build targeted
-interventions. Many types of data are collected including surveys,
-electronic health records, genomic data, and blood and urine tests. In
-this study, we aim to look at the part of the All of Us cohort that
-responded to the social determinants of health survey, which has
-self-reported scores of stress (derived from Cohen’s Perceived Stress
-Scale), loneliness (derived from UCLA Loneliness Scale), social support
-(derived from RAND MOS Social Support Survey Instrument), social
-cohesion (Social Cohesion Neighborhood Scale), and neighborhood disorder
-(Ross-Mirowsky Perceived Neighborhood Disorder Scale). It is a
-cross-sectional view of total of 57,365 respondents. We hypothesize that
-self-reported scores of loneliness will be associated with those of
-stress. We will explore the strength of that association in comparison
-to the other scores. The other covariates accounted for are age, sex at
-birth, sexual orientation, race/ethnicity, education, income,
-birthplace, home ownership, marital status, and health insurance status.
-As we want to account for confounding in the relationship between
-loneliness score and stress score, we will conduct correlation analyses
-and linear regression analysis.</p>
+<div id="methods" class="section level1">
+<h1>Methods</h1>
+<p>We fitted linear regression models to investigate the relationship
+between the participant’s self-reported loneliness score and stress
+score. The primary exposure loneliness score has range 0-4, and higher
+score means greater loneliness. The primary outcome stress score has
+range 0-4, and higher score means greater stress. NA values take up less
+than 10% of each variable except for income which has 13.9% NA values.
+We carried out nonparametric tests for univariate correlation analyses,
+as our outcome stress score is not normally distributed. Stress score
+has median of 1.2, mean of 1.313, is right-skewed with skewness of 0.49,
+and has a kurtosis of 2.8. All predictors were significantly associated
+with stress score at p-value of 0.05. We checked the linearity
+assumption for continuous predictors loneliness score, social support
+score, neighborhood disorder score, social cohesion score, and age by
+looking at the scatter plot of each vs. stress score. For subsequent
+linear regression modeling, we excluded NA values which yielded a total
+of 45,114 complete cases.</p>
+<p>Although the outcome stress score is not normally distributed, our
+sample size is large enough for the central limit theorem to hold.
+Because we have many predictors, a total of 18, we first carried out
+univariate regression analyses to exclude any variable that is not
+significant at p-value 0.05 and decrease the problem of over-fitting.
+With the significant variables, we used automated forward selection
+algorithm to select variables for their significance at p-value 0.05
+level. To account for the fact that the automated method would include
+only the significant confounders, we additionally checked the
+automatically removed variables and included them back in if they
+changed the loneliness score effect size by more than 10%.</p>
+<p><img src="table1.png" width="100%" /></p>
+<p>Table 1. Stress score univariate correlation test results<br />
+**Any aggregates below 20 is suppressed following All of Us Research
+Privacy Policy</p>
+</div>
+<div id="results" class="section level1">
+<h1>Results</h1>
+<p><img src="before.png" width="100%" />
+<img src="after.png" width="100%" /> Figure 1. Before and after data
+wrangling<br />
+** Individual level data is suppressed following All of Us Research
+Privacy Policy</p>
+<p>Extensive data wrangling was necessary to make a final tidy
+dataframe. In the beginning there were three different datasets,
+including the Demographics (age, sex, etc.), the Basics (income,
+education, birthplace, etc.), and the Social Determinants (loneliness
+score, stress score, etc.). Each respondent had multiple rows for each
+question they answered. I pivoted wide the dataframe so that each column
+is a question and the value is the answer to the question. I collapsed
+rows so that each respondent had one row. I selected the questions I
+wanted and then renamed the columns. I joined the three different
+datasets together by the respondent IDs. In order to carry out a
+regression analysis, I changed character values into 0 and 1 for binary
+variables or 0-3+ factors for multi-categorical variables.</p>
+<p><img src="table3.png" width="100%" /> Table 2. Stress score linear
+regression modeling results</p>
+<p>Regression results showed that having a 1 score higher in the
+loneliness score was associated with a 0.555 higher score in the stress
+score, with all other predictors held constant. The effect estimate was
+significant at p-value level of 0.05. To note, in our regression model,
+the race predictor was excluded by forward selection as it was not
+significantly associated with the stress score after adjusting for the
+other predictors. Our exposure of interest, loneliness score, turned out
+to have the biggest effect in association with the stress score, bigger
+in magnitude than any other scores. Not being married or partnered was
+associated with a 0.186 lower score in the stress score compared to
+those who are married or partnered, with all other predictors held
+constant, which was the biggest effect size for a predictor that is
+associated with lower levels of stress.</p>
+</div>
 
 
 

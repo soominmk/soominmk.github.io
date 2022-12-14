@@ -1,0 +1,10 @@
+---
+title: "References"
+---
+
+1. All of Us Research Program. All of Us Researcher Workbench. National Institute of Health. Accessed December 13, 2022. https://workbench.researchallofus.org/.
+2. Cohen S, Kamarck T, Mermelstein R. A global measure of perceived stress. J Health Soc Behav. 1983 Dec;24(4):385-96. PMID: 6668417.
+3. Russell D, Peplau LA, Ferguson ML. Developing a measure of loneliness. J Pers Assess. 1978 Jun;42(3):290-4. doi: 10.1207/s15327752jpa4203_11. PMID: 660402.
+4. Sherbourne CD, Stewart AL. The MOS social support survey. Soc Sci Med. 1991;32(6):705-14. doi: 10.1016/0277-9536(91)90150-b. PMID: 2035047.
+5. Bateman LB, Fouad MN, Hawk B, Osborne T, Bae S, Eady S, Thompson J, Brantley W, Crawford L, Heider L, Schoenberger YM. Examining Neighborhood Social Cohesion in the Context of Community-based Participatory Research: Descriptive Findings from an Academic-Community Partnership. Ethn Dis. 2017 Nov 9;27(Suppl 1):329-336. doi: 10.18865/ed.27.S1.329. PMID: 29158658; PMCID: PMC5684777.
+6. Ross, C. E., & Mirowsky, J. (1999). Disorder and Decay: The Concept and Measurement of Perceived Neighborhood Disorder. Urban Affairs Review, 34(3), 412–432. https://doi.org/10.1177/107808749903400304
